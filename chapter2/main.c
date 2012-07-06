@@ -16,6 +16,8 @@ int read_nums(char *filename, int *numlist)
 	while(fscanf(fp, "%d", &numlist[count]) != EOF)
 		count++;
 
+	fclose(fp);
+
 	return count;
 }
 
@@ -27,6 +29,8 @@ int write_nums(char *filename, int *numlist, unsigned int count)
 	fp = fopen(filename, "w");
 	for (i=0; i<count; i++)
 		fprintf(fp, "%d\n", numlist[i]);
+
+	fclose(fp);
 
 	return 0;
 }
