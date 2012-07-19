@@ -50,8 +50,7 @@ int main(int argc, char *argv[])
 	end = clock();
 	write_nums("result", numlist, count);
 
-	printf("\"%s\" finish, use %lds [%ld]\n", argv[0], (end-start)/CLOCKS_PER_SEC,
-			(end-start));
+	printf("\"%s\" finish, use %lds\n", argv[0], (end-start)/CLOCKS_PER_SEC);
 
 	return 0;
 }
